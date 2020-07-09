@@ -8,7 +8,7 @@ Then, for "AFC", col = ('C'-'A'+1)\*26<sup>0</sup> + ('F'-'A'+1)\*26<sup>1</sup>
 
 ### Solution:
   Take the input as a string 2d array. Then, iterate over it and whenever we find an *expression*, we calculate its value recursively. Note that it has to be recursive because the cells involved in an expression may be an expression themselves. So, you extract the cells' indices from the expression, convert them as mentioned above, calculate their effective value using a recursive call, and add them all up. After you calculate its effective value, store it in your array, in case it was needed in another calculation. This will save you some time.  
-  Pay attention to the format of the output as there is no space after the last element of each row.
+Pay attention to the format of the output as there is no space after the last element of each row.  
   **Time complexity:**  ***O(Rows \* Columns)***.  
 Another editorial for iterative solution can be found [here](https://algorithmist.com/wiki/UVa_196_-_Spreadsheet).  
 You can find my ***C++*** solution in the same folder. Moreover, Here's a [link](https://github.com/kalex1994/UVA/blob/master/196.cpp) to a similar soltuion.  
