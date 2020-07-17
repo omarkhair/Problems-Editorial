@@ -1,4 +1,4 @@
-# ZOJ - Mining Editorial
+# ZOJ - 1200 Mining Editorial
 
 You can read the problem statement  [here](https://zoj.pintia.cn/problem-sets/91827364500/problems/91827364699).  
 This is obviously a simulation problem. We should simulate the process of robots being created, going to the digging area, collecting units, and coming back to the base until we reach **10000 Units** in base. We shall not simulate it minute by minute because this is not efficient as the time can grow to very large numbers.   
