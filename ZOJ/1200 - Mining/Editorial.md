@@ -11,7 +11,8 @@ We are given 5 numbers as inputs:
 
 ### Solution:
   We will use a **min priority queue** that will tell us the time required for each robot to reach the digging area. At the beginning, each robot needs *M* minutes to be built and *S* minutes to reach the digging area. So, the *1st* robot needs **M + S** minutes in total, *2nd* robot **2M + S** minutes, and the *last* robot needs **k * M + S** minutes. After adding those to our priority queue, we will let the first robot start digging, assume it starts at time **T**. The area will be occupied for *W* minutes. Note that for the next robot to dig, it will have to wait until this one finishes at **T+W**. After **T+W+S** minutes, this robot would reach the base with additional *C* units. It will be available again at the digging area after *S* minutes, so we will add **T+W+2S** to the PQ. Now we can choose the next robot in the PQ to work, and its start time would be the maximum between the time it reaches and the time the digging area becomes available.  
-  This loop shall continue till we reach at least **10000 Units** in base. The final answer would be the *time to start the last dig + W + S*.
+  This loop shall continue till we reach at least **10000 Units** in base. The final answer would be the *time to start the last dig + W + S*.  
+  Another explanation can be found [here](https://github.com/thackerhelik/ZOJ/blob/master/1200.cpp).  
 #### C++ code:
 ``` #include<iostream>
 #include <bits/stdc++.h>
